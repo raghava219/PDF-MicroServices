@@ -1,4 +1,5 @@
 import express from 'express';
+import conversionController from './controllers/conversions.js';
 
 const PORT = 5001;
 
@@ -7,9 +8,7 @@ class Application {
 
         const app = express();
 
-        app.get("/", (req, res) => {
-            res.send('Test endpoint');
-        });
+        app.use('/conversions', conversionController);
 
         app.listen(PORT, () => {
             console.log(`Application listening on port ${PORT}...`);
