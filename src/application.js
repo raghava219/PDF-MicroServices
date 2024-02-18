@@ -7,13 +7,13 @@ class Application {
 
         const app = express();
 
+        app.get("/", (req, res) => {
+            res.send('Test endpoint');
+        });
 
-
-        //const buffer = await htmlToPDF('<html><body><h1>Test Data</h1></body></html>');
-        // console.log('buffer', buffer);
-
-
-
+        app.listen(PORT, () => {
+            console.log(`Application listening on port ${PORT}...`);
+        });
     }
 }
 
