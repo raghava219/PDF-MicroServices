@@ -1,0 +1,17 @@
+{
+  "name": "pdf-microservice",
+  "version": "1.0.0",
+  "description": "NodeJS app for creating PDF",
+  "main": "./src/index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node ./src/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.18.2",
+    "puppeteer": "^22.1.0"
+  }
+}
