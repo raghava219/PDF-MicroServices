@@ -3,9 +3,16 @@ import htmlToPDF from '../helpers/html-to-pdf.js';
 
 const router = express.Router();
 
-router.get('/', async (req, res) => {
+router.post('/', async (req, res) => {
 
-    const pdf = await htmlToPDF('<html><body><h1>Conversion Controller in PDF</h1></body></html>');
+    const { html } = req.body;
+
+    if (!html) {
+        res.send(400).send('Request body should contain an html property.');
+        return;
+    }
+
+    const pdf = await htmlToPDF(html);
     res.contentType('application/pdf');
     res.send(pdf);
 

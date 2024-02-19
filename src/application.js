@@ -8,6 +8,7 @@ class Application {
 
         const app = express();
 
+        app.use(express.json());
         app.use('/conversions', conversionController);
 
         app.listen(PORT, () => {
