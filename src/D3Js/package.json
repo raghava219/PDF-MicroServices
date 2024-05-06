@@ -1,0 +1,7 @@
+{
+  "dependencies": {
+    "html-convert": "^2.1.7",
+    "html-to-image": "^1.11.11",
+    "puppeteer": "^22.7.1"
+  }
+}
